@@ -24,7 +24,7 @@ export default {
   },
   methods:{
     async getHeaderData(){
-      const res = await fetch('http://192.168.1.11:8000/api/home/title-page')
+      const res = await fetch('https://api.p10i.it/api/home/title-page')
       let json_res = await res.json()
 
       this.title = json_res.title
