@@ -24,4 +24,4 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/mP3nn/p10i_frontend:latest
+            ghcr.io/mp3nn/p10i_frontend:latest
