@@ -1,6 +1,6 @@
 <template>
   <footer id="footer">
-    <span class="copyright">&copy; 2021 {{ copyright }}.</span>
+    <span class="copyright">&copy; 2022 {{ copyright }}.</span>
   </footer>
 </template>
 
