@@ -23,7 +23,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -31,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	background-attachment: scroll;
 }
 
 ol, ul {
@@ -225,13 +227,11 @@ input, select, textarea {
 		-ms-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
 	/* Set your background with this */
-
-		background: #348cb2 url("images/bg.jpg") bottom left;
-		background-repeat: repeat-x;
+		background: #014051 url("images/bg.jpg") repeat-x bottom left;
 		height: 100%;
 		left: 0;
 		opacity: 1;
-		position: fixed;
+		position: relative;
 		top: 0;
 	}
 
@@ -304,65 +304,6 @@ input, select, textarea {
 		width: 6750px;
 	}
 
-/* Overlay */
-
-	@-moz-keyframes overlay {
-		0% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@-webkit-keyframes overlay {
-		0% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@-ms-keyframes overlay {
-		0% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
-
-	@keyframes overlay {
-		0% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
-
-	#overlay {
-		-moz-animation: overlay 1.5s 1.5s forwards;
-		-webkit-animation: overlay 1.5s 1.5s forwards;
-		-ms-animation: overlay 1.5s 1.5s forwards;
-		animation: overlay 1.5s 1.5s forwards;
-		background-attachment: fixed, fixed;
-		background-image: url("images/overlay-pattern.png"), url("images/overlay.svg");
-		background-position: top left, center center;
-		background-repeat: repeat, no-repeat;
-		background-size: auto, cover;
-		height: 100%;
-		left: 0;
-		opacity: 0;
-		position: fixed;
-		top: 0;
-		width: 100%;
-	}
 
 /* Main */
 

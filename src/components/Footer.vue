@@ -7,8 +7,21 @@
 <script>
 export default {
   name: 'Footer',
-  props: {
-    copyright : String,
+  data() {
+    return {
+      copyright: '',
+    }
+  },
+  methods:{
+    async getFooterData(){
+      const res = await fetch('https://api.p10i.it/api/home/footer')
+      let json_res = await res.json()
+
+      this.copyright = json_res.copyright
+    }
+  },
+  mounted() {
+    this.getFooterData()
   },
 }
 </script>

@@ -1,13 +1,12 @@
 <template>
   <header id="header">
     <h1>{{ title }}</h1>
-    <p>HS Student &nbsp;&bull;&nbsp; Self-taught WebDev &nbsp;&bull;&nbsp; Photographer</p>
+    <p>{{ info[0] }} &nbsp;&bull;&nbsp; {{ info[1] }} &nbsp;&bull;&nbsp; {{ info[2] }}</p>
     <nav>
       <ul>
         <li v-for="btn in btns" :key="Object.keys(btn)[0]">
           <a :href="Object.values(btn)[0][1]" :class="Object.values(btn)[0][0]" class= "icon" ><span class="label">{{ Object.keys(btn)[0] }}</span></a>
         </li>
-
       </ul>
     </nav>
   </header>
@@ -19,7 +18,8 @@ export default {
   data() {
     return {
       title: '',
-      btns: []
+      btns: [],
+      info: [],
     }
   },
   methods:{
@@ -29,6 +29,7 @@ export default {
 
       this.title = json_res.title
       this.btns = json_res.btns
+      this.info = json_res.info
     }
   },
   mounted() {
